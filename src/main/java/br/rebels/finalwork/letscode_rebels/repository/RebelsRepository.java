@@ -14,8 +14,14 @@ public class RebelsRepository {
 
     public RebelsEntity save(RebelsEntity entity) {
         entity.setId(sequence++);
+        // Aqui chamamos um método para calcular o ano de nascimento da pessoa OPCIONAL
         list.add(entity);
         return entity;
     }
+
+    public List<RebelsEntity> getAll() {
+        return list;
+    }
+
 
 }
