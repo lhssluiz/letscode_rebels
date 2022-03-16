@@ -24,6 +24,7 @@ public class RebelsRepository {
     }
 
     public void atualizaLocalizacao(RebelsEntity entity) {
+
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getId().equals(entity.getId())) {
                 list.get(i).setLocalizacao(entity.getLocalizacao());

@@ -36,9 +36,9 @@ public class RebelsController {
         return ResponseEntity.ok(responseList);
     }
 
-    @PutMapping("/localizacao/{id}")
-    public ResponseEntity<ResponseRebelsDTO> atualizarLocalizacao(@PathVariable Long id, PatchAtualizaLocalizacaoDTO patchDTO){
-        System.out.println(patchDTO.toString());
+    @PatchMapping("/localizacao/{id}")
+    public ResponseEntity<ResponseRebelsDTO> atualizaLocalizacao(@PathVariable Long id, @RequestBody PatchAtualizaLocalizacaoDTO patchDTO){
+        System.out.println(patchDTO.getLongitude());
         ResponseRebelsDTO response = rebelsService.atualizaLocalizacao(id, patchDTO);
 
         return ResponseEntity.ok(response);
