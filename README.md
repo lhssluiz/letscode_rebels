@@ -24,7 +24,7 @@ Below you'll find a model to make the POST
 }
 
 ### To update the Rebels localization goes for this PATCH
-## PATCH - v1/rebels/localization/{id}
+#### PATCH - v1/rebels/localization/{id}
 
 {
   "localizacao":{
@@ -34,8 +34,8 @@ Below you'll find a model to make the POST
     }
 }
 
-## If you'll want to check all the Rebels in the database, goes for a GET
-GET - v1/rebels
+### If you'll want to check all the Rebels in the database, goes for a GET
+#### GET - v1/rebels
 
 If you have any doubt ask for more infos with us!
 
