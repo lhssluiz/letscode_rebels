@@ -10,7 +10,10 @@ public class ConverterUtil {
         ResponseRebelsDTO dto = new ResponseRebelsDTO();
         dto.setId(entity.getId());
         dto.setNome(entity.getNome());
+        dto.setGenero(entity.getGenero());
         dto.setIdade(entity.getIdade());
+        dto.setInventory(entity.getInventory());
+        dto.setLocalizacao(entity.getLocalizacao());
         return dto;
     }
 
@@ -19,6 +22,9 @@ public class ConverterUtil {
 
         entity.setNome(dto.getNome());
         entity.setIdade(dto.getIdade());
+        entity.setGenero(dto.getGenero());
+        entity.setInventory(dto.getInventory());
+        entity.setLocalizacao(dto.getLocalizacao());
         return entity;
     }
 

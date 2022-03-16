@@ -15,23 +15,24 @@ public class RebelsEntity {
     private String nome;
     private Integer idade;
     private LocalDate dataNascimento;
-   // private RebelsLocalization localizacao;
-    //private RebelsInventory inventory;
+    private String genero;
+    private RebelsLocalization localizacao;
+    private RebelsInventory inventory;
 
 //    public RebelsEntity(Long id,
 //                        String nome,
 //                        Integer idade,
-//                        LocalDate dataNascimento
-//                        //RebelsLocalization rebelsLocalization,
-//                        //RebelsInventory rebelsInventory
+////                        LocalDate dataNascimento,
+//                        RebelsLocalization localizacao,
+//                        RebelsInventory rebelsInventory
 //                        ){
 //
 //        this.id = id;
 //        this.nome = nome;
 //        this.idade = idade;
-//        this.dataNascimento = dataNascimento;
-//       // this.localizacao = rebelsLocalization;
-//       // this.inventory = rebelsInventory;
-//
-//    }
+////        this.dataNascimento = dataNascimento;
+//        this.localizacao = localizacao;
+//        this.inventory = rebelsInventory;
+
+    //}
 }

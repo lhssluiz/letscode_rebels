@@ -1,6 +1,7 @@
 package br.rebels.finalwork.letscode_rebels.controller;
 
 import br.rebels.finalwork.letscode_rebels.dto.AddRebelsDTO;
+import br.rebels.finalwork.letscode_rebels.dto.PatchAtualizaLocalizacaoDTO;
 import br.rebels.finalwork.letscode_rebels.dto.ResponseRebelsDTO;
 import br.rebels.finalwork.letscode_rebels.entity.RebelsEntity;
 import br.rebels.finalwork.letscode_rebels.service.RebelsService;
@@ -19,8 +20,7 @@ public class RebelsController {
 
     private final RebelsService rebelsService;
 
-    @RequestMapping("/add")
-    @ResponseBody
+    @PostMapping("/add")
     public ResponseEntity<ResponseRebelsDTO> addRebel(@RequestBody AddRebelsDTO addRebelsDTO) {
         ResponseRebelsDTO response = rebelsService.add(addRebelsDTO);
 
@@ -34,5 +34,14 @@ public class RebelsController {
     public ResponseEntity<List<ResponseRebelsDTO>> getAllRebels() {
         List<ResponseRebelsDTO> responseList = rebelsService.getAllRebels();
         return ResponseEntity.ok(responseList);
+    }
+
+    @PutMapping("/localizacao/{id}")
+    public ResponseEntity<ResponseRebelsDTO> atualizarLocalizacao(@PathVariable Long id, PatchAtualizaLocalizacaoDTO patchDTO){
+        System.out.println(patchDTO.toString());
+        ResponseRebelsDTO response = rebelsService.atualizaLocalizacao(id, patchDTO);
+
+        return ResponseEntity.ok(response);
+
     }
 }
