@@ -10,6 +10,7 @@ public class ConverterUtil {
         ResponseRebelsDTO dto = new ResponseRebelsDTO();
         dto.setId(entity.getId());
         dto.setNome(entity.getNome());
+        dto.setIdade(entity.getIdade());
         return dto;
     }
 

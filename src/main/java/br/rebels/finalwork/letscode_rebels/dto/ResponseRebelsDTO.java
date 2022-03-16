@@ -11,4 +11,5 @@ public class ResponseRebelsDTO {
 
     private Long id;
     private String nome;
+    private Integer idade;
 }
