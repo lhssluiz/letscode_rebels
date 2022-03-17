@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.util.List;
+import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/v1/rebels")
@@ -58,4 +59,22 @@ public class RebelsController {
         return ResponseEntity.ok(response);
 
     }
+
+    @GetMapping("/reports/traitors-percent")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<String> reportGetTraitors() {
+
+        List<ResponseRebelsDTO> responseList = rebelsService.getAllRebels();
+
+        Stream<ResponseRebelsDTO> traidores = responseList.stream()
+                .filter(rebel -> rebel.getTraidor() == true);
+
+        Double percent = ((double)traidores.count() / responseList.size()) * 100;
+
+        System.out.println(responseList.size());
+
+        return ResponseEntity.ok(percent + "%");
+    }
+
+
 }
