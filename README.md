@@ -23,7 +23,7 @@ Below you'll find a model to make the POST
     "agua": 1,
 
 }
-![](../../Pictures/add.jpg)
+https://user-images.githubusercontent.com/68027909/158874056-7fa106ed-5cbb-4cb2-bb09-0cf2fa173724.jpg
 
 ### To update the Rebels localization goes for this PATCH
 #### PATCH - v1/rebels/localizacao/{id}
