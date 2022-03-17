@@ -54,7 +54,19 @@ public class RebelsService {
         return responseDTO;
     }
 
+    public ResponseRebelsDTO rebelIsTraitor(Long id) {
 
+        RebelsEntity entity = rebelsRepository.getById(id);
 
+        entity.setContadorTraicao(entity.getContadorTraicao() + 1);
+
+        if(entity.getContadorTraicao() > 2) {
+            entity.setTraidor(true);
+        }
+
+        ResponseRebelsDTO responseDTO = ConverterUtil.toDTO(entity);
+
+        return responseDTO;
+    }
 
 }

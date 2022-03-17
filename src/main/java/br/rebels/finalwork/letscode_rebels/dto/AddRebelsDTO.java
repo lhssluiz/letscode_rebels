@@ -16,4 +16,7 @@ public class AddRebelsDTO {
     private String genero;
     private RebelsLocalization localizacao;
     private RebelsInventory inventory;
+
+    private Boolean traidor;
+    private Integer contadorTraicao;
 }

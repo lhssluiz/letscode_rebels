@@ -38,8 +38,17 @@ public class RebelsController {
 
     @PatchMapping("/localizacao/{id}")
     public ResponseEntity<ResponseRebelsDTO> atualizaLocalizacao(@PathVariable Long id, @RequestBody PatchAtualizaLocalizacaoDTO patchDTO){
-        System.out.println(patchDTO.getLongitude());
+
         ResponseRebelsDTO response = rebelsService.atualizaLocalizacao(id, patchDTO);
+
+        return ResponseEntity.ok(response);
+
+    }
+
+    @PatchMapping("/report-traitor/{id}")
+    public ResponseEntity<ResponseRebelsDTO> reportRebelAsTraitor(@PathVariable Long id){
+
+        ResponseRebelsDTO response = rebelsService.rebelIsTraitor(id);
 
         return ResponseEntity.ok(response);
 

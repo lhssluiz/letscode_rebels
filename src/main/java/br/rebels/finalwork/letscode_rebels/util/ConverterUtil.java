@@ -14,6 +14,9 @@ public class ConverterUtil {
         dto.setIdade(entity.getIdade());
         dto.setInventory(entity.getInventory());
         dto.setLocalizacao(entity.getLocalizacao());
+
+        dto.setContadorTraicao(entity.getContadorTraicao());
+        dto.setTraidor(entity.getTraidor());
         return dto;
     }
 

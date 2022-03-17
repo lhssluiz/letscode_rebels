@@ -18,6 +18,8 @@ public class RebelsEntity {
     private String genero;
     private RebelsLocalization localizacao;
     private RebelsInventory inventory;
+    private Integer contadorTraicao;
+    private Boolean traidor;
 
 //    public RebelsEntity(Long id,
 //                        String nome,
