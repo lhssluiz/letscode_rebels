@@ -9,33 +9,53 @@ Hello! Hello!!
 Below you'll find a model to make the POST
 
 {
-  “nome”: “Teste”,
-	“idade”: ”integer”,
+  “nome”: “Rodrigo”,
+	“idade”: ”20”,
 	“genero”: "M",
  	“localização”: {
     “latitude”:888888,
     “longitude”:999999,
-    “nomeGalaxia”:”Um nome de Galaxia”
+    “nomeGalaxia”:”Orion”
 }
 	“inventario”:{
     "arma":3,
-    "municao":5
+    "municao":5,
+    "agua": 1,
 
 }
+![](../../Pictures/add.jpg)
 
 ### To update the Rebels localization goes for this PATCH
-#### PATCH - v1/rebels/localization/{id}
+#### PATCH - v1/rebels/localizacao/{id}
 
 {
-  "localizacao":{
     “latitude”:5555555,
     “longitude”:444444,
     “nomeGalaxia”:”Uma nova Galaxia”
     }
 }
+![](../../Pictures/localizacao.jpg)
 
 ### If you'll want to check all the Rebels in the database, goes for a GET
 #### GET - v1/rebels
 
-If you have any doubt ask for more infos with us!
 
+![](../../Pictures/rebels.jpg)
+
+
+### If you'll want to change a Rebels to traitor
+#### PATCH - v1/rebels/report-traitor/id
+
+![](../../Pictures/traitor.jpg)
+
+### If you'll want to know a percent of Rebels
+#### GET - v1/rebels/reports/rebels-percent
+
+![](../../Pictures/percent_rebels.jpg)
+
+### If you'll want to know a percent of Traitors
+#### GET - v1/rebels/reports/traitors-percent
+
+![](../../Pictures/percent_traitors.jpg)
+
+If you have any doubt ask for more infos with us!
