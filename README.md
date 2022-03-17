@@ -34,7 +34,7 @@ Below you'll find a model to make the POST
     “nomeGalaxia”:”Uma nova Galaxia”
     }
 }
-![](../../Pictures/localizacao.jpg)
+![localizacao](https://user-images.githubusercontent.com/68027909/158874857-b741cad4-11a9-4196-a9af-04d1534647d6.jpg)
 
 ### If you'll want to check all the Rebels in the database, goes for a GET
 #### GET - v1/rebels
