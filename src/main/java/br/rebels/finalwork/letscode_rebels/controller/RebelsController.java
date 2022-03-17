@@ -6,6 +6,7 @@ import br.rebels.finalwork.letscode_rebels.dto.ResponseRebelsDTO;
 import br.rebels.finalwork.letscode_rebels.entity.RebelsEntity;
 import br.rebels.finalwork.letscode_rebels.service.RebelsService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +22,7 @@ public class RebelsController {
     private final RebelsService rebelsService;
 
     @PostMapping("/add")
+    @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<ResponseRebelsDTO> addRebel(@RequestBody AddRebelsDTO addRebelsDTO) {
         ResponseRebelsDTO response = rebelsService.add(addRebelsDTO);
 
@@ -31,12 +33,14 @@ public class RebelsController {
     }
 
     @GetMapping
+    @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<List<ResponseRebelsDTO>> getAllRebels() {
         List<ResponseRebelsDTO> responseList = rebelsService.getAllRebels();
         return ResponseEntity.ok(responseList);
     }
 
     @PatchMapping("/localizacao/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<ResponseRebelsDTO> atualizaLocalizacao(@PathVariable Long id, @RequestBody PatchAtualizaLocalizacaoDTO patchDTO){
 
         ResponseRebelsDTO response = rebelsService.atualizaLocalizacao(id, patchDTO);
@@ -46,6 +50,7 @@ public class RebelsController {
     }
 
     @PatchMapping("/report-traitor/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<ResponseRebelsDTO> reportRebelAsTraitor(@PathVariable Long id){
 
         ResponseRebelsDTO response = rebelsService.rebelIsTraitor(id);
