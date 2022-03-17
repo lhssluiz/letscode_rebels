@@ -40,22 +40,22 @@ Below you'll find a model to make the POST
 #### GET - v1/rebels
 
 
-![](../../Pictures/rebels.jpg)
+![rebels](https://user-images.githubusercontent.com/68027909/158875193-cd66b590-3778-4f7d-aebc-ea292a3f5f25.jpg)
 
 
 ### If you'll want to change a Rebels to traitor
 #### PATCH - v1/rebels/report-traitor/id
 
-![](../../Pictures/traitor.jpg)
+![traitor](https://user-images.githubusercontent.com/68027909/158875349-b54edbfc-43f0-4efb-a49d-f14606b7610f.jpg)
 
 ### If you'll want to know a percent of Rebels
 #### GET - v1/rebels/reports/rebels-percent
 
-![](../../Pictures/percent_rebels.jpg)
+![percent_rebels](https://user-images.githubusercontent.com/68027909/158875605-b1f1c51c-bac3-4bc5-85b3-783a0251c0a2.jpg)
 
 ### If you'll want to know a percent of Traitors
 #### GET - v1/rebels/reports/traitors-percent
 
-![](../../Pictures/percent_traitors.jpg)
+![percent_traitors](https://user-images.githubusercontent.com/68027909/158875727-981647ac-e508-467c-bba6-35112c413518.jpg)
 
 If you have any doubt ask for more infos with us!
