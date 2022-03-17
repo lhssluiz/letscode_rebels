@@ -71,10 +71,22 @@ public class RebelsController {
 
         Double percent = ((double)traidores.count() / responseList.size()) * 100;
 
-        System.out.println(responseList.size());
-
         return ResponseEntity.ok(percent + "%");
     }
 
+    @GetMapping("/reports/rebels-percent")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<String> reportGetRebels() {
+
+        List<ResponseRebelsDTO> responseList = rebelsService.getAllRebels();
+
+        Stream<ResponseRebelsDTO> rebeldes = responseList.stream()
+                .filter(rebel -> rebel.getTraidor() == false);
+
+        Double percent = ((double)rebeldes.count() / responseList.size()) * 100;
+
+
+        return ResponseEntity.ok(percent + "%");
+    }
 
 }
